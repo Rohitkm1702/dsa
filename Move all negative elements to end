@@ -1,0 +1,28 @@
+//Your Task:  
+//You don't need to read input or print anything. Your task is to complete the function segregateElements() which takes the array arr[] and its size N as inputs and store the answer in the array arr[] itself.
+
+
+class Solution {
+    
+    public void segregateElements(int arr[], int n)
+    {
+       
+        
+          ArrayList<Integer>list=new ArrayList<>();
+     for(int i=0;i<n;i++){
+         if(arr[i]>=0)
+             list.add(arr[i]);
+     } 
+         
+    for(int i=0;i<n;i++){ 
+         if(arr[i]<0){
+             list.add(arr[i]);
+         }
+     }
+     
+     for(int i=0;i<n;i++){
+        arr[i]=list.get(i);
+     }
+     
+    }
+}
